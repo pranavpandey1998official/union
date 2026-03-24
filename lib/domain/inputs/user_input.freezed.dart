@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,117 +9,27 @@ part of 'user_input.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$LoginUserInput {
-  String get password => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
+  String get password;
+  String get email;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginUserInput
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $LoginUserInputCopyWith<LoginUserInput> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LoginUserInputCopyWith<$Res> {
-  factory $LoginUserInputCopyWith(
-          LoginUserInput value, $Res Function(LoginUserInput) then) =
-      _$LoginUserInputCopyWithImpl<$Res, LoginUserInput>;
-  @useResult
-  $Res call({String password, String email});
-}
-
-/// @nodoc
-class _$LoginUserInputCopyWithImpl<$Res, $Val extends LoginUserInput>
-    implements $LoginUserInputCopyWith<$Res> {
-  _$LoginUserInputCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? password = null,
-    Object? email = null,
-  }) {
-    return _then(_value.copyWith(
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$LoginUserInputImplCopyWith<$Res>
-    implements $LoginUserInputCopyWith<$Res> {
-  factory _$$LoginUserInputImplCopyWith(_$LoginUserInputImpl value,
-          $Res Function(_$LoginUserInputImpl) then) =
-      __$$LoginUserInputImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String password, String email});
-}
-
-/// @nodoc
-class __$$LoginUserInputImplCopyWithImpl<$Res>
-    extends _$LoginUserInputCopyWithImpl<$Res, _$LoginUserInputImpl>
-    implements _$$LoginUserInputImplCopyWith<$Res> {
-  __$$LoginUserInputImplCopyWithImpl(
-      _$LoginUserInputImpl _value, $Res Function(_$LoginUserInputImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? password = null,
-    Object? email = null,
-  }) {
-    return _then(_$LoginUserInputImpl(
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$LoginUserInputImpl implements _LoginUserInput {
-  const _$LoginUserInputImpl({required this.password, required this.email});
-
-  @override
-  final String password;
-  @override
-  final String email;
-
-  @override
-  String toString() {
-    return 'LoginUserInput(password: $password, email: $email)';
-  }
+      _$LoginUserInputCopyWithImpl<LoginUserInput>(
+          this as LoginUserInput, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginUserInputImpl &&
+            other is LoginUserInput &&
             (identical(other.password, password) ||
                 other.password == password) &&
             (identical(other.email, email) || other.email == email));
@@ -128,141 +38,539 @@ class _$LoginUserInputImpl implements _LoginUserInput {
   @override
   int get hashCode => Object.hash(runtimeType, password, email);
 
-  @JsonKey(ignore: true)
   @override
-  @pragma('vm:prefer-inline')
-  _$$LoginUserInputImplCopyWith<_$LoginUserInputImpl> get copyWith =>
-      __$$LoginUserInputImplCopyWithImpl<_$LoginUserInputImpl>(
-          this, _$identity);
-}
-
-abstract class _LoginUserInput implements LoginUserInput {
-  const factory _LoginUserInput(
-      {required final String password,
-      required final String email}) = _$LoginUserInputImpl;
-
-  @override
-  String get password;
-  @override
-  String get email;
-  @override
-  @JsonKey(ignore: true)
-  _$$LoginUserInputImplCopyWith<_$LoginUserInputImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$SignUpUserInput {
-  String get password => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get username => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $SignUpUserInputCopyWith<SignUpUserInput> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SignUpUserInputCopyWith<$Res> {
-  factory $SignUpUserInputCopyWith(
-          SignUpUserInput value, $Res Function(SignUpUserInput) then) =
-      _$SignUpUserInputCopyWithImpl<$Res, SignUpUserInput>;
-  @useResult
-  $Res call({String password, String email, String name, String username});
-}
-
-/// @nodoc
-class _$SignUpUserInputCopyWithImpl<$Res, $Val extends SignUpUserInput>
-    implements $SignUpUserInputCopyWith<$Res> {
-  _$SignUpUserInputCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? password = null,
-    Object? email = null,
-    Object? name = null,
-    Object? username = null,
-  }) {
-    return _then(_value.copyWith(
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  String toString() {
+    return 'LoginUserInput(password: $password, email: $email)';
   }
 }
 
 /// @nodoc
-abstract class _$$SignUpUserInputImplCopyWith<$Res>
-    implements $SignUpUserInputCopyWith<$Res> {
-  factory _$$SignUpUserInputImplCopyWith(_$SignUpUserInputImpl value,
-          $Res Function(_$SignUpUserInputImpl) then) =
-      __$$SignUpUserInputImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $LoginUserInputCopyWith<$Res> {
+  factory $LoginUserInputCopyWith(
+          LoginUserInput value, $Res Function(LoginUserInput) _then) =
+      _$LoginUserInputCopyWithImpl;
   @useResult
-  $Res call({String password, String email, String name, String username});
+  $Res call({String password, String email});
 }
 
 /// @nodoc
-class __$$SignUpUserInputImplCopyWithImpl<$Res>
-    extends _$SignUpUserInputCopyWithImpl<$Res, _$SignUpUserInputImpl>
-    implements _$$SignUpUserInputImplCopyWith<$Res> {
-  __$$SignUpUserInputImplCopyWithImpl(
-      _$SignUpUserInputImpl _value, $Res Function(_$SignUpUserInputImpl) _then)
-      : super(_value, _then);
+class _$LoginUserInputCopyWithImpl<$Res>
+    implements $LoginUserInputCopyWith<$Res> {
+  _$LoginUserInputCopyWithImpl(this._self, this._then);
 
+  final LoginUserInput _self;
+  final $Res Function(LoginUserInput) _then;
+
+  /// Create a copy of LoginUserInput
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? password = null,
     Object? email = null,
-    Object? name = null,
-    Object? username = null,
   }) {
-    return _then(_$SignUpUserInputImpl(
+    return _then(_self.copyWith(
       password: null == password
-          ? _value.password
+          ? _self.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
       email: null == email
-          ? _value.email
+          ? _self.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [LoginUserInput].
+extension LoginUserInputPatterns on LoginUserInput {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_LoginUserInput value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LoginUserInput() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_LoginUserInput value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LoginUserInput():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_LoginUserInput value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LoginUserInput() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String password, String email)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LoginUserInput() when $default != null:
+        return $default(_that.password, _that.email);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String password, String email) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LoginUserInput():
+        return $default(_that.password, _that.email);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String password, String email)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LoginUserInput() when $default != null:
+        return $default(_that.password, _that.email);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+
+class _LoginUserInput implements LoginUserInput {
+  const _LoginUserInput({required this.password, required this.email});
+
+  @override
+  final String password;
+  @override
+  final String email;
+
+  /// Create a copy of LoginUserInput
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LoginUserInputCopyWith<_LoginUserInput> get copyWith =>
+      __$LoginUserInputCopyWithImpl<_LoginUserInput>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _LoginUserInput &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.email, email) || other.email == email));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, password, email);
+
+  @override
+  String toString() {
+    return 'LoginUserInput(password: $password, email: $email)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$LoginUserInputCopyWith<$Res>
+    implements $LoginUserInputCopyWith<$Res> {
+  factory _$LoginUserInputCopyWith(
+          _LoginUserInput value, $Res Function(_LoginUserInput) _then) =
+      __$LoginUserInputCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String password, String email});
+}
+
+/// @nodoc
+class __$LoginUserInputCopyWithImpl<$Res>
+    implements _$LoginUserInputCopyWith<$Res> {
+  __$LoginUserInputCopyWithImpl(this._self, this._then);
+
+  final _LoginUserInput _self;
+  final $Res Function(_LoginUserInput) _then;
+
+  /// Create a copy of LoginUserInput
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? password = null,
+    Object? email = null,
+  }) {
+    return _then(_LoginUserInput(
+      password: null == password
+          ? _self.password
+          : password // ignore: cast_nullable_to_non_nullable
               as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
+      email: null == email
+          ? _self.email
+          : email // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
 }
 
 /// @nodoc
+mixin _$SignUpUserInput {
+  String get password;
+  String get email;
+  String get name;
+  String get username;
 
-class _$SignUpUserInputImpl implements _SignUpUserInput {
-  const _$SignUpUserInputImpl(
+  /// Create a copy of SignUpUserInput
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SignUpUserInputCopyWith<SignUpUserInput> get copyWith =>
+      _$SignUpUserInputCopyWithImpl<SignUpUserInput>(
+          this as SignUpUserInput, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SignUpUserInput &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.username, username) ||
+                other.username == username));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, password, email, name, username);
+
+  @override
+  String toString() {
+    return 'SignUpUserInput(password: $password, email: $email, name: $name, username: $username)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SignUpUserInputCopyWith<$Res> {
+  factory $SignUpUserInputCopyWith(
+          SignUpUserInput value, $Res Function(SignUpUserInput) _then) =
+      _$SignUpUserInputCopyWithImpl;
+  @useResult
+  $Res call({String password, String email, String name, String username});
+}
+
+/// @nodoc
+class _$SignUpUserInputCopyWithImpl<$Res>
+    implements $SignUpUserInputCopyWith<$Res> {
+  _$SignUpUserInputCopyWithImpl(this._self, this._then);
+
+  final SignUpUserInput _self;
+  final $Res Function(SignUpUserInput) _then;
+
+  /// Create a copy of SignUpUserInput
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? password = null,
+    Object? email = null,
+    Object? name = null,
+    Object? username = null,
+  }) {
+    return _then(_self.copyWith(
+      password: null == password
+          ? _self.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _self.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      username: null == username
+          ? _self.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [SignUpUserInput].
+extension SignUpUserInputPatterns on SignUpUserInput {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SignUpUserInput value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SignUpUserInput() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SignUpUserInput value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SignUpUserInput():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_SignUpUserInput value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SignUpUserInput() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String password, String email, String name, String username)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _SignUpUserInput() when $default != null:
+        return $default(
+            _that.password, _that.email, _that.name, _that.username);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String password, String email, String name, String username)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SignUpUserInput():
+        return $default(
+            _that.password, _that.email, _that.name, _that.username);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String password, String email, String name, String username)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _SignUpUserInput() when $default != null:
+        return $default(
+            _that.password, _that.email, _that.name, _that.username);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+
+class _SignUpUserInput implements SignUpUserInput {
+  const _SignUpUserInput(
       {required this.password,
       required this.email,
       required this.name,
@@ -277,16 +585,19 @@ class _$SignUpUserInputImpl implements _SignUpUserInput {
   @override
   final String username;
 
+  /// Create a copy of SignUpUserInput
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'SignUpUserInput(password: $password, email: $email, name: $name, username: $username)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SignUpUserInputCopyWith<_SignUpUserInput> get copyWith =>
+      __$SignUpUserInputCopyWithImpl<_SignUpUserInput>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SignUpUserInputImpl &&
+            other is _SignUpUserInput &&
             (identical(other.password, password) ||
                 other.password == password) &&
             (identical(other.email, email) || other.email == email) &&
@@ -298,31 +609,60 @@ class _$SignUpUserInputImpl implements _SignUpUserInput {
   @override
   int get hashCode => Object.hash(runtimeType, password, email, name, username);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'SignUpUserInput(password: $password, email: $email, name: $name, username: $username)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$SignUpUserInputCopyWith<$Res>
+    implements $SignUpUserInputCopyWith<$Res> {
+  factory _$SignUpUserInputCopyWith(
+          _SignUpUserInput value, $Res Function(_SignUpUserInput) _then) =
+      __$SignUpUserInputCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String password, String email, String name, String username});
+}
+
+/// @nodoc
+class __$SignUpUserInputCopyWithImpl<$Res>
+    implements _$SignUpUserInputCopyWith<$Res> {
+  __$SignUpUserInputCopyWithImpl(this._self, this._then);
+
+  final _SignUpUserInput _self;
+  final $Res Function(_SignUpUserInput) _then;
+
+  /// Create a copy of SignUpUserInput
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$SignUpUserInputImplCopyWith<_$SignUpUserInputImpl> get copyWith =>
-      __$$SignUpUserInputImplCopyWithImpl<_$SignUpUserInputImpl>(
-          this, _$identity);
+  $Res call({
+    Object? password = null,
+    Object? email = null,
+    Object? name = null,
+    Object? username = null,
+  }) {
+    return _then(_SignUpUserInput(
+      password: null == password
+          ? _self.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: null == email
+          ? _self.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      username: null == username
+          ? _self.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
-abstract class _SignUpUserInput implements SignUpUserInput {
-  const factory _SignUpUserInput(
-      {required final String password,
-      required final String email,
-      required final String name,
-      required final String username}) = _$SignUpUserInputImpl;
-
-  @override
-  String get password;
-  @override
-  String get email;
-  @override
-  String get name;
-  @override
-  String get username;
-  @override
-  @JsonKey(ignore: true)
-  _$$SignUpUserInputImplCopyWith<_$SignUpUserInputImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

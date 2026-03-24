@@ -6,17 +6,17 @@ part of 'user_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AuthUserModelImpl _$$AuthUserModelImplFromJson(Map<String, dynamic> json) =>
-    _$AuthUserModelImpl(
-      id: json['id'] as int,
+_AuthUserModel _$AuthUserModelFromJson(Map<String, dynamic> json) =>
+    _AuthUserModel(
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       email: json['email'] as String,
       username: json['username'] as String,
-      walletID: json['walletID'] as int,
+      walletID: (json['walletID'] as num).toInt(),
       token: json['token'] as String,
     );
 
-Map<String, dynamic> _$$AuthUserModelImplToJson(_$AuthUserModelImpl instance) =>
+Map<String, dynamic> _$AuthUserModelToJson(_AuthUserModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

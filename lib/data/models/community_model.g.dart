@@ -84,7 +84,7 @@ const CommunityModelSchema = CollectionSchema(
   getId: _communityModelGetId,
   getLinks: _communityModelGetLinks,
   attach: _communityModelAttach,
-  version: '3.1.0+1',
+  version: '3.3.2',
 );
 
 int _communityModelEstimateSize(
@@ -1773,14 +1773,14 @@ extension CommunityModelQueryProperty
 
 CommunityModel _$CommunityModelFromJson(Map<String, dynamic> json) =>
     CommunityModel(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       about: json['about'] as String?,
       name: json['name'] as String?,
-      presidentId: json['presidentId'] as int?,
+      presidentId: (json['presidentId'] as num?)?.toInt(),
       walletId: json['walletId'] as String?,
-      walletVoteTokens: json['walletVoteTokens'] as int?,
-      genesisId: json['genesisId'] as int?,
-      memberCount: json['memberCount'] as int?,
+      walletVoteTokens: (json['walletVoteTokens'] as num?)?.toInt(),
+      genesisId: (json['genesisId'] as num?)?.toInt(),
+      memberCount: (json['memberCount'] as num?)?.toInt(),
       isMember: json['isMember'] as bool?,
       created: json['created'] == null
           ? null

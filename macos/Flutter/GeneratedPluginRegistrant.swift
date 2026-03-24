@@ -9,7 +9,7 @@ import device_info_plus
 import dynamic_color
 import file_selector_macos
 import gal
-import isar_flutter_libs
+import isar_community_flutter_libs
 import path_provider_foundation
 import share_plus
 import shared_preferences_foundation

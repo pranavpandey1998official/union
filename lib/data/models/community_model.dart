@@ -3,7 +3,7 @@
 
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:isar/isar.dart';
+import 'package:isar_community/isar.dart';
 import 'package:uniun/domain/entities/community/community_entity.dart';
 
 part 'community_model.g.dart';

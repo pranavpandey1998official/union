@@ -1,7 +1,7 @@
 
 
 import 'package:injectable/injectable.dart';
-import 'package:isar/isar.dart';
+import 'package:isar_community/isar.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:uniun/core/error/error_exception.dart';
 import 'package:uniun/data/models/community_model.dart';

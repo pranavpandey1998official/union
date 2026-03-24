@@ -1,4 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format width=80
 
 // **************************************************************************
 // InjectableConfigGenerator
@@ -8,147 +9,131 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:dio/dio.dart' as _i5;
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:injectable/injectable.dart' as _i2;
-import 'package:isar/isar.dart' as _i6;
+import 'package:dio/dio.dart' as _i361;
+import 'package:get_it/get_it.dart' as _i174;
+import 'package:injectable/injectable.dart' as _i526;
+import 'package:isar_community/isar.dart' as _i214;
 
-import '../community/bloc/community_cubit.dart' as _i21;
-import '../community/bloc/community_feed_cubit.dart' as _i22;
-import '../community/bloc/craete_community_cubit.dart' as _i23;
-import '../community/cubit/create_post_cubit.dart' as _i29;
-import '../core/api/api_consumer.dart' as _i3;
-import '../core/api/dio_consumer.dart' as _i4;
-import '../core/bloc/uniun/uniun_bloc.dart' as _i9;
-import '../data/datasources/local_datasource.dart' as _i7;
-import '../data/datasources/remote_datasource.dart' as _i8;
-import '../data/repositories/comment_repository_impl.dart' as _i13;
-import '../data/repositories/community_repository_impl.dart' as _i15;
-import '../data/repositories/post_repository_imp.dart' as _i20;
-import '../data/repositories/user_repository_impl.dart' as _i11;
-import '../domain/repositories/comment_repository.dart' as _i12;
-import '../domain/repositories/community_repository.dart' as _i14;
-import '../domain/repositories/post_repository.dart' as _i19;
-import '../domain/repositories/user_repository.dart' as _i10;
-import '../domain/usecases/comment_usecase.dart' as _i17;
-import '../domain/usecases/community_usecase.dart' as _i16;
-import '../domain/usecases/post_usecase.dart' as _i24;
-import '../domain/usecases/user_usecase.dart' as _i18;
-import '../posts/bloc/post_bloc.dart' as _i26;
-import '../search/bloc/search_bloc.dart' as _i27;
-import '../user/bloc/login_cubit.dart' as _i25;
-import '../user/bloc/signup_cubit.dart' as _i28;
-import 'injectable_singleton_module.dart' as _i30;
+import '../community/bloc/community_cubit.dart' as _i744;
+import '../community/bloc/community_feed_cubit.dart' as _i832;
+import '../community/bloc/craete_community_cubit.dart' as _i329;
+import '../community/cubit/create_post_cubit.dart' as _i571;
+import '../core/api/api_consumer.dart' as _i114;
+import '../core/api/dio_consumer.dart' as _i84;
+import '../core/bloc/uniun/uniun_bloc.dart' as _i624;
+import '../data/datasources/local_datasource.dart' as _i2;
+import '../data/datasources/remote_datasource.dart' as _i79;
+import '../data/repositories/community_repository_impl.dart' as _i46;
+import '../data/repositories/note_repository_impl.dart' as _i498;
+import '../data/repositories/user_repository_impl.dart' as _i223;
+import '../domain/repositories/community_repository.dart' as _i248;
+import '../domain/repositories/note_repository.dart' as _i116;
+import '../domain/repositories/user_repository.dart' as _i544;
+import '../domain/usecases/community_usecase.dart' as _i659;
+import '../domain/usecases/user_usecase.dart' as _i622;
+import '../posts/bloc/post_bloc.dart' as _i450;
+import '../search/bloc/search_bloc.dart' as _i995;
+import '../user/bloc/login_cubit.dart' as _i78;
+import '../user/bloc/signup_cubit.dart' as _i846;
+import 'injectable_singleton_module.dart' as _i327;
 
-extension GetItInjectableX on _i1.GetIt {
+extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
-  Future<_i1.GetIt> init({
+  Future<_i174.GetIt> init({
     String? environment,
-    _i2.EnvironmentFilter? environmentFilter,
+    _i526.EnvironmentFilter? environmentFilter,
   }) async {
-    final gh = _i2.GetItHelper(
+    final gh = _i526.GetItHelper(
       this,
       environment,
       environmentFilter,
     );
     final injectableSingletonModule = _$InjectableSingletonModule();
     final isarModule = _$IsarModule();
-    gh.lazySingleton<_i3.ApiConsumer>(() => _i4.DioConsumer());
-    gh.factoryAsync<_i5.Dio>(() => injectableSingletonModule.getDio());
-    await gh.singletonAsync<_i6.Isar>(
+    gh.factoryAsync<_i361.Dio>(() => injectableSingletonModule.getDio());
+    gh.factory<_i624.UniunBloc>(() => _i624.UniunBloc());
+    await gh.singletonAsync<_i214.Isar>(
       () => isarModule.createIsar(),
       preResolve: true,
     );
-    gh.singleton<_i7.LocalDataSource>(
-        _i7.LocalDataSourceImp(isar: gh<_i6.Isar>()));
-    gh.lazySingleton<_i8.RemoteDataSource>(
-        () => _i8.RemoteDataSourceImpl(apiConsumer: gh<_i3.ApiConsumer>()));
-    gh.factory<_i9.UniunBloc>(() => _i9.UniunBloc());
-    gh.factory<_i10.UserRepository>(
-        () => _i11.UserRepositoryImpl(gh<_i8.RemoteDataSource>()));
-    gh.factory<_i12.CommentRepository>(
-        () => _i13.CommentRepositoryImpl(gh<_i8.RemoteDataSource>()));
-    gh.factory<_i14.CommunityRepository>(() => _i15.CommunityRepositoryImpl(
-          remoteDataSource: gh<_i8.RemoteDataSource>(),
-          localDataSource: gh<_i7.LocalDataSource>(),
+    gh.lazySingleton<_i114.ApiConsumer>(() => _i84.DioConsumer());
+    gh.factory<_i450.PostBloc>(() => _i450.PostBloc(
+          gh<InvalidType>(),
+          gh<InvalidType>(),
+          gh<InvalidType>(),
         ));
-    gh.factory<_i16.CreateCommunityUseCase>(
-        () => _i16.CreateCommunityUseCase(gh<_i14.CommunityRepository>()));
-    gh.factory<_i17.GetCommentUserCase>(
-        () => _i17.GetCommentUserCase(gh<_i12.CommentRepository>()));
-    gh.factory<_i16.GetCommunityFeedUseCase>(
-        () => _i16.GetCommunityFeedUseCase(gh<_i14.CommunityRepository>()));
-    gh.factory<_i16.GetCommunityUseCase>(
-        () => _i16.GetCommunityUseCase(gh<_i14.CommunityRepository>()));
-    gh.factory<_i17.GetSubCommentsUseCase>(
-        () => _i17.GetSubCommentsUseCase(gh<_i12.CommentRepository>()));
-    gh.factory<_i16.GetTrendingCommunitiesUseCase>(() =>
-        _i16.GetTrendingCommunitiesUseCase(gh<_i14.CommunityRepository>()));
-    gh.factory<_i16.JoinCommunityUseCase>(
-        () => _i16.JoinCommunityUseCase(gh<_i14.CommunityRepository>()));
-    gh.factory<_i16.LeaveCommunityUseCase>(
-        () => _i16.LeaveCommunityUseCase(gh<_i14.CommunityRepository>()));
-    gh.factory<_i18.LoginUserUseCase>(
-        () => _i18.LoginUserUseCase(gh<_i10.UserRepository>()));
-    gh.factory<_i19.PostRepository>(
-        () => _i20.PostRepositoryImpl(gh<_i8.RemoteDataSource>()));
-    gh.factory<_i16.SearchCommunityUseCase>(
-        () => _i16.SearchCommunityUseCase(gh<_i14.CommunityRepository>()));
-    gh.factory<_i18.SignUpUserUseCase>(
-        () => _i18.SignUpUserUseCase(gh<_i10.UserRepository>()));
-    gh.factory<_i16.UnblockUserFromCommunityUseCase>(() =>
-        _i16.UnblockUserFromCommunityUseCase(gh<_i14.CommunityRepository>()));
-    gh.factory<_i16.BlockUserFromCommunityUseCase>(() =>
-        _i16.BlockUserFromCommunityUseCase(gh<_i14.CommunityRepository>()));
-    gh.factoryParam<_i21.CommunityCubit, int?, dynamic>((
+    gh.lazySingleton<_i79.RemoteDataSource>(
+        () => _i79.RemoteDataSourceImpl(apiConsumer: gh<_i114.ApiConsumer>()));
+    gh.factory<_i116.NoteRepository>(
+        () => _i498.NoteRepositoryImpl(isar: gh<_i214.Isar>()));
+    gh.singleton<_i2.LocalDataSource>(
+        () => _i2.LocalDataSourceImp(isar: gh<_i214.Isar>()));
+    gh.factory<_i544.UserRepository>(
+        () => _i223.UserRepositoryImpl(gh<_i79.RemoteDataSource>()));
+    gh.factory<_i248.CommunityRepository>(() => _i46.CommunityRepositoryImpl(
+          remoteDataSource: gh<_i79.RemoteDataSource>(),
+          localDataSource: gh<_i2.LocalDataSource>(),
+        ));
+    gh.factory<_i622.LoginUserUseCase>(
+        () => _i622.LoginUserUseCase(gh<_i544.UserRepository>()));
+    gh.factory<_i622.SignUpUserUseCase>(
+        () => _i622.SignUpUserUseCase(gh<_i544.UserRepository>()));
+    gh.factory<_i659.GetCommunityUseCase>(
+        () => _i659.GetCommunityUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i659.JoinCommunityUseCase>(
+        () => _i659.JoinCommunityUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i659.LeaveCommunityUseCase>(
+        () => _i659.LeaveCommunityUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i659.GetCommunityFeedUseCase>(
+        () => _i659.GetCommunityFeedUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i659.BlockUserFromCommunityUseCase>(() =>
+        _i659.BlockUserFromCommunityUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i659.UnblockUserFromCommunityUseCase>(() =>
+        _i659.UnblockUserFromCommunityUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i659.CreateCommunityUseCase>(
+        () => _i659.CreateCommunityUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i659.SearchCommunityUseCase>(
+        () => _i659.SearchCommunityUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i659.GetTrendingCommunitiesUseCase>(() =>
+        _i659.GetTrendingCommunitiesUseCase(gh<_i248.CommunityRepository>()));
+    gh.factory<_i329.CreateCommunityCubit>(
+        () => _i329.CreateCommunityCubit(gh<_i659.CreateCommunityUseCase>()));
+    gh.factory<_i571.CreatePostCubit>(() => _i571.CreatePostCubit(
+          gh<_i659.GetCommunityUseCase>(),
+          gh<InvalidType>(),
+        ));
+    gh.factory<_i846.SignUpCubit>(
+        () => _i846.SignUpCubit(gh<_i622.SignUpUserUseCase>()));
+    gh.factory<_i78.LoginCubit>(
+        () => _i78.LoginCubit(gh<_i622.LoginUserUseCase>()));
+    gh.factoryParam<_i744.CommunityCubit, int?, dynamic>((
       communityID,
       _,
     ) =>
-        _i21.CommunityCubit(
-          getCommunityUseCase: gh<_i16.GetCommunityUseCase>(),
-          joinCommunityUseCase: gh<_i16.JoinCommunityUseCase>(),
-          leaveCommunityUseCase: gh<_i16.LeaveCommunityUseCase>(),
+        _i744.CommunityCubit(
+          getCommunityUseCase: gh<_i659.GetCommunityUseCase>(),
+          joinCommunityUseCase: gh<_i659.JoinCommunityUseCase>(),
+          leaveCommunityUseCase: gh<_i659.LeaveCommunityUseCase>(),
           communityID: communityID,
         ));
-    gh.factoryParam<_i22.CommunityFeedCubit, int?, dynamic>((
+    gh.factoryParam<_i832.CommunityFeedCubit, int?, dynamic>((
       communityID,
       _,
     ) =>
-        _i22.CommunityFeedCubit(
-          getCommunityFeedUseCase: gh<_i16.GetCommunityFeedUseCase>(),
+        _i832.CommunityFeedCubit(
+          getCommunityFeedUseCase: gh<_i659.GetCommunityFeedUseCase>(),
           communityID: communityID,
         ));
-    gh.factory<_i23.CreateCommunityCubit>(
-        () => _i23.CreateCommunityCubit(gh<_i16.CreateCommunityUseCase>()));
-    gh.factory<_i24.CreatePostUseCase>(
-        () => _i24.CreatePostUseCase(gh<_i19.PostRepository>()));
-    gh.factory<_i24.GetAllCommentsForPost>(
-        () => _i24.GetAllCommentsForPost(gh<_i19.PostRepository>()));
-    gh.factory<_i24.GetPostUseCase>(
-        () => _i24.GetPostUseCase(gh<_i19.PostRepository>()));
-    gh.factory<_i25.LoginCubit>(
-        () => _i25.LoginCubit(gh<_i18.LoginUserUseCase>()));
-    gh.factory<_i26.PostBloc>(() => _i26.PostBloc(
-          gh<_i24.GetPostUseCase>(),
-          gh<_i17.GetCommentUserCase>(),
-          gh<_i24.GetAllCommentsForPost>(),
-        ));
-    gh.factory<_i27.SearchBloc>(() => _i27.SearchBloc(
-          gh<_i16.SearchCommunityUseCase>(),
-          gh<_i16.JoinCommunityUseCase>(),
-          gh<_i16.LeaveCommunityUseCase>(),
-          gh<_i16.GetTrendingCommunitiesUseCase>(),
-        ));
-    gh.factory<_i28.SignUpCubit>(
-        () => _i28.SignUpCubit(gh<_i18.SignUpUserUseCase>()));
-    gh.factory<_i29.CreatePostCubit>(() => _i29.CreatePostCubit(
-          gh<_i16.GetCommunityUseCase>(),
-          gh<_i24.CreatePostUseCase>(),
+    gh.factory<_i995.SearchBloc>(() => _i995.SearchBloc(
+          gh<_i659.SearchCommunityUseCase>(),
+          gh<_i659.JoinCommunityUseCase>(),
+          gh<_i659.LeaveCommunityUseCase>(),
+          gh<_i659.GetTrendingCommunitiesUseCase>(),
         ));
     return this;
   }
 }
 
-class _$InjectableSingletonModule extends _i30.InjectableSingletonModule {}
+class _$InjectableSingletonModule extends _i327.InjectableSingletonModule {}
 
-class _$IsarModule extends _i7.IsarModule {}
+class _$IsarModule extends _i2.IsarModule {}
